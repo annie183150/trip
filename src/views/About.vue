@@ -1,6 +1,12 @@
 <template>
   <div class="about">
-    <List todoList="您的行程安排" />
+    <!-- 傳資料給List子元件 -->
+    <List
+      v-for="(i, index) in data"
+      :key="index"
+      :imgSrc="i.pictureSrc"
+      :todoList="i.dscription"
+    />
   </div>
 </template>
 <script lang="ts">
