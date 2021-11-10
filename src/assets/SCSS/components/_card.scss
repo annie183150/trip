@@ -1,0 +1,14 @@
+.card {
+  max-width: 540px;
+  p {
+    @include textOverFlowHidden(3);
+  }
+}
+.annie-card-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.n-5 {
+  margin-top: -100px;
+}

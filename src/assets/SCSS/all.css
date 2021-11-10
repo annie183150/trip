@@ -1,0 +1,23 @@
+.card {
+  max-width: 540px;
+}
+
+.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.annie-card-pic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.n-5 {
+  margin-top: -100px;
+}
+/*# sourceMappingURL=all.css.map */

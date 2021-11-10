@@ -1,13 +1,12 @@
 <template>
-  <h2>熱門景點</h2>
+  <h2>熱門美食</h2>
   <div class="container">
     <div class="row">
-      <CardH
-        v-for="(i, index) in sceneList"
+      <CardF
+        v-for="(i, index) in foodList"
         :key="index"
         :imgSrc="i.Picture.PictureUrl1"
         :title="i.Name"
-        :description="i.Description"
         :add="i.City"
       />
     </div>
@@ -17,20 +16,20 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import axios from "axios";
-import CardH from "@/components/CardH.vue";
+import CardF from "@/components/CardF.vue";
 // import jsSHA from "jssha"      //module
 
 export default defineComponent({
   components: {
-    CardH,
+    CardF,
   },
   props: {},
   setup() {
-    const sceneList = ref([]);
+    const foodList = ref([]);
     //在這裡請求景點資料API
     axios
       .get(
-        "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=10&$format=JSON"
+        "https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$top=10&$format=JSON"
       )
       //   ,{
       //     headers: getAuthorizationHeader()
@@ -38,7 +37,7 @@ export default defineComponent({
       // )
       .then((res: any) => {
         console.log(res.data);
-        sceneList.value = res.data;
+        foodList.value = res.data;
       });
 
     // function getAuthorizationHeader() {
@@ -56,7 +55,7 @@ export default defineComponent({
     // };
 
     return {
-      sceneList,
+      foodList,
     };
   },
 });
