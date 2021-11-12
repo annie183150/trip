@@ -1,13 +1,15 @@
 <template>
   <div class="col-12 col-md-4 col-lg-3 mb-3">
-    <div class="card h-100">
-      <img class="w-100 annie-card-pic ps-2 pe-2" :src="imgSrc" alt="" />
-      <div class="card-body n-5 mt-3">
+    <div class="row">
+      <img class="card-pic ps-2 pe-2" :src="imgSrc" alt="" />
+      <div class="col section2-col">
+        <h3 class="text-start">{{ title }}</h3>
         <hr />
-        <p class="card-text">{{ title }}</p>
-        <p class="text-start">
-          <small class="text-muted">{{ add }}</small>
-        </p>
+        <div class="col d-flex">
+          <p class="text">{{ add }}</p>
+          <p class="text">{{ organizer }}</p>
+        </div>
+        <p class="text-start">時間</p>
       </div>
     </div>
   </div>
@@ -26,12 +28,16 @@ export default defineComponent({
     title: {
       type: String,
     },
-    description: {
-      type: String,
-    },
     add: {
       type: String,
     },
+    organizer: {
+      type: String,
+    },
+    // activityData: {
+    //   type: Object,
+    //   default: {}
+    // },
   },
   setup() {
     return {};

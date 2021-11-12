@@ -1,13 +1,11 @@
 <template>
   <div class="col-12 col-md-4 col-lg-3 mb-3">
     <div class="card h-100">
-      <img class="w-100 annie-card-pic ps-2 pe-2" :src="imgSrc" alt="" />
-      <div class="card-body">
-        <hr />
-        <p class="card-text">{{ title }}</p>
-        <p class="text-start">
-          <small class="text-muted">{{ add }}</small>
-        </p>
+      <img class="w-100 card-pic ps-2 pe-2" :src="imgSrc" alt="" />
+      <hr />
+      <div class="card-body d-flex">
+        <p class="card-text me-5">{{ title }}</p>
+        <p class="text-end ms-5">{{ add }}</p>
       </div>
     </div>
   </div>

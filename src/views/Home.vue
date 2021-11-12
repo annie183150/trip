@@ -1,11 +1,10 @@
 <template>
   <div class="home">
-    <HotScene />
-    <a href="https://icons8.com/icon/enn64pGPtmU9/search"
-      >Search icon by Icons8</a
-    >
-    <HotFood />
-    <HotActivity />
+    <div class="container">
+      <HotScene />
+      <HotFood />
+      <HotActivity />
+    </div>
   </div>
 </template>
 

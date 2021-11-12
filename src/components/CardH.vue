@@ -1,18 +1,16 @@
 <template>
   <div class="col-12 col-lg-6 mb-3">
-    <div class="card h-100">
-      <div class="row g-0">
-        <div class="col-md-6">
-          <img class="w-100 annie-card-pic" :src="imgSrc" alt=" " />
-        </div>
-        <div class="col-md-6">
-          <div class="card-body">
-            <h5 class="card-title">{{ title }}</h5>
-            <p class="card-text">{{ description }}</p>
-            <p class="text-start">
-              <small class="text-muted">{{ add }}</small>
-            </p>
-          </div>
+    <div class="row g-0 h-100">
+      <div class="col-md-7">
+        <img class="w-100 card-pic" :src="imgSrc" alt=" " />
+      </div>
+      <div class="col-md-6 section2-row">
+        <div class="card-body">
+          <h5 class="card-title">{{ title }}</h5>
+          <p class="card-text">{{ description }}</p>
+          <p class="text-start">
+            <small class="text-muted">{{ add }}</small>
+          </p>
         </div>
       </div>
     </div>
