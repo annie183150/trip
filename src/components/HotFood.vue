@@ -9,6 +9,14 @@
       :add="i.City"
     />
   </div>
+  <div class="home-container">
+    <MyPagination
+      @change-page="changePage"
+      :pagesize="10"
+      :total="80"
+      :page="1"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -35,6 +43,19 @@ export default defineComponent({
         console.log(res.data);
         foodList.value = res.data;
       });
+    // // 筛选条件准备
+    // const reqParams = ref({
+    //   // 当前页码
+    //   page: 1,
+    //   // 每页的条数
+    //   pageSize: 10
+    // })
+    // // 控制页码的变化
+    // const changePage = (page) => {
+    //   // 修改分页参数，重新调用接口即可
+    //   // console.log(page)
+    //   reqParams.page = page
+    // }
 
     //加密herder
     function getAuthorizationHeader() {
@@ -58,6 +79,7 @@ export default defineComponent({
 
     return {
       foodList,
+      // changePage ,
     };
   },
 });
