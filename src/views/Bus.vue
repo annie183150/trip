@@ -1,11 +1,11 @@
 <template>
-  <div class="about">
+  <div class="bus">
     <!-- 傳資料給List子元件 -->
     <BusList
       v-for="(i, index) in data"
       :key="index"
       :iNumber="i.RouteID"
-      :iRoad="i.SubRoutes.Headsign"
+      :iRoad="i.Headsign"
     />
   </div>
 </template>
@@ -16,6 +16,7 @@ import BusList from "@/components/BusList.vue";
 import jsSHA from "jssha";
 
 export default defineComponent({
+  name: "bus",
   components: {
     BusList,
   },

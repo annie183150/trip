@@ -29,7 +29,7 @@ export default defineComponent({
     //在這裡請求景點資料API
     axios
       .get(
-        "https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/Taichung?$top=10&$format=JSON",
+        "https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/Taichung?$top=4&$format=JSON",
         header
       )
       .then((res: any) => {
